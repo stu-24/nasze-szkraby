@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nasze Szkraby - Sklep z odzieżą dziecięcą</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#FF6FB5'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 min-h-screen flex flex-col items-start justify-start p-8 gap-6">
+
+  <!-- Pierwszy nagłówek -->
+  <header class="bg-white shadow-sm w-full max-w-6xl rounded-2xl overflow-hidden">
+    <div class="px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- Logo SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-12 h-12">
+          <circle cx="50" cy="50" r="48" fill="#E0F7FA" stroke="#80DEEA" stroke-width="2" />
+          <path d="M30 40 L50 20 L70 40" stroke="#FFB6C1" stroke-width="4" fill="none" stroke-linecap="round" />
+          <line x1="30" y1="40" x2="30" y2="60" stroke="#FFB6C1" stroke-width="4" stroke-linecap="round" />
+          <line x1="70" y1="40" x2="70" y2="60" stroke="#FFB6C1" stroke-width="4" stroke-linecap="round" />
+          <line x1="30" y1="60" x2="70" y2="60" stroke="#FFB6C1" stroke-width="4" stroke-linecap="round" />
+        </svg>
+        <span class="font-semibold text-xl text-brand">Nasze Szkraby</span>
+      </div>
+
+      <!-- Ikony przesunięte maksymalnie w prawo -->
+      <nav class="hidden md:flex items-center gap-6 ml-auto">
+        <!-- Ikona logowania -->
+        <a href="#login" class="hover:text-brand relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.879 6.196M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </a>
+        <!-- Ikona ulubione -->
+        <a href="#ulubione" class="hover:text-brand relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+          </svg>
+          <span id="fav-count" class="absolute -top-2 -right-2 bg-brand text-white text-xs rounded-full px-1">0</span>
+        </a>
+        <!-- Ikona koszyk -->
+        <a href="#koszyk" class="hover:text-brand relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 8h14l-2-8M10 21a1 1 0 11-2 0 1 1 0 012 0zm8 0a1 1 0 11-2 0 1 1 0 012 0z" />
+          </svg>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-brand text-white text-xs rounded-full px-1">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Drugi nagłówek -->
+  <header class="bg-white text-gray-800 shadow-md w-full max-w-6xl rounded-2xl overflow-hidden">
+    <div class="px-6 py-4 flex justify-between items-center">
+      <div class="flex-1 flex items-center gap-6">
+        <div class="relative flex-1 max-w-xs">
+          <input type="text" placeholder="Szukaj produktów..." class="w-full border rounded-full pl-4 pr-10 py-1 focus:outline-none focus:ring-2 focus:ring-brand text-gray-800" />
+        </div>
+        <a href="#niemowlak" class="hover:underline">Niemowlak</a>
+        <a href="#chlopiec" class="hover:underline">Chłopiec</a>
+        <a href="#dziewczynka" class="hover:underline">Dziewczynka</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sekcja produktów -->
+  <main class="w-full max-w-6xl">
+    <section id="niemowlak" class="mt-6">
+      <h2 class="text-xl font-semibold mb-4">Niemowlak</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/niemowlak/317366073_5704757936308287_2871362174603240786_n.jpg" alt="Body niemowlęce" class="w-full h-48 object-cover rounded-lg">
+          <h3 class="mt-2 font-medium">Body niemowlęce</h3>
+          <p class="text-gray-600">39 zł</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/niemowlak/320493855_6271415802890817_2867735587036284257_n.jpg" alt="Śpiochy niemowlęce" class="w-full h-48 object-cover rounded-lg">
+          <h3 class="mt-2 font-medium">Śpiochy niemowlęce</h3>
+          <p class="text-gray-600">49 zł</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="chlopiec" class="mt-6">
+      <h2 class="text-xl font-semibold mb-4">Chłopiec</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/chlopiec/325489575_8763420000395420_832288731662176378_n.jpg" alt="Koszulka chłopięca" class="w-full h-48 object-cover rounded-lg">
+          <h3 class="mt-2 font-medium">Koszulka chłopięca</h3>
+          <p class="text-gray-600">29 zł</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/chlopiec/317362302_5660239040761711_5832953938379170629_n.jpg" alt="Bluza chłopięca" class="w-full h-48 object-cover rounded-lg">
+          <h3 class="mt-2 font-medium">Bluza chłopięca</h3>
+          <p class="text-gray-600">69 zł</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dziewczynka" class="mt-6">
+      <h2 class="text-xl font-semibold mb-4">Dziewczynka</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/dziewczynka/321789929_6231935436817600_4868633683882227112_n.jpg" alt="Sukienka dziewczęca" class="w-full h-48 object-cover rounded-lg">
+          <h3 class="mt-2 font-medium">Sukienka dziewczęca</h3>
+          <p class="text-gray-600">59 zł</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/dziewczynka/315546954_6199368713420234_1607096210848455680_n.jpg" alt="Sweterek dziewczęcy" class="w-full h-48 object-cover rounded-lg">
+          <h3 class="mt-2 font-medium">Sweterek dziewczęcy</h3>
+          <p class="text-gray-600">79 zł</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/dziewczynka/316862929_5895639293851874_2130887003953626804_n.jpg" alt="Komplet dziewczęcy" class="w-full h-48 object-cover rounded-lg">
+          <h3 class="mt-2 font-medium">Komplet dziewczęcy</h3>
+          <p class="text-gray-600">99 zł</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="assets/dziewczynka/pobrane.jfif" alt="Czapeczka dziewczęca" class="w-full h-48 object-cover rounded-lg">
+          <h3 class="mt-2 font-medium">Czapeczka dziewczęca</h3>
+          <p class="text-gray-600">19 zł</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
